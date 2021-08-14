@@ -6,11 +6,9 @@ import com.hwangrq.dianping.common.AdminPermission;
 import com.hwangrq.dianping.common.BusinessException;
 import com.hwangrq.dianping.common.CommonUtil;
 import com.hwangrq.dianping.common.EnumBusinessError;
-import com.hwangrq.dianping.model.CategoryModel;
 import com.hwangrq.dianping.model.ShopModel;
 import com.hwangrq.dianping.request.PageQuery;
 import com.hwangrq.dianping.request.ShopCreateRequest;
-import com.hwangrq.dianping.service.CategoryService;
 import com.hwangrq.dianping.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -73,11 +71,7 @@ public class ShopController {
         shopModel.setSellerId(shopCreateReq.getSellerId());
 
         shopService.create(shopModel);
-
-
         return "redirect:/admin/shop/index";
-
-
     }
 
 }
